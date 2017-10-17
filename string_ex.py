@@ -15,47 +15,47 @@ string2 = "Red Fox"
 
 def compare_strings_case_sensitive(str1, str2):
     if str1 == str2:
-        print "Strings '%s' and '%s' are case sensitive equal" % (str1, str2)
+        print("Strings '%s' and '%s' are case sensitive equal" % (str1, str2))
     else:
-        print "Strings '%s' and '%s' are NOT case sensitive equal" % (str1, str2)
+        print("Strings '%s' and '%s' are NOT case sensitive equal" % (str1, str2))
 
 
 def compare_strings_case_insensitive(str1, str2):
     if str1.lower() == str2.lower():
-        print "Strings '%s' and '%s' are case insensitive equal" % (str1, str2)
+        print("Strings '%s' and '%s' are case insensitive equal" % (str1, str2))
     else:
-        print "Strings '%s' and '%s' are NOT case insensitive equal" % (str1, str2)
+        print("Strings '%s' and '%s' are NOT case insensitive equal" % (str1, str2))
 
 
 def split_string(string_to_split, delimiter):
     part1, rest = string_to_split, None
     if delimiter in string_to_split:
-        print 'delimiter found'
+        print('delimiter found')
         part1, rest = string_to_split.split(delimiter)
     else:
-        print 'no delimiter found'
-    print part1
-    print rest
+        print('no delimiter found')
+    print(part1)
+    print(rest)
 
 
 def string_parts():
     mystring = "dragan"
 
-    print "len({}) = {}".format(mystring, len(mystring))
-    print "{}[0] = {}".format(mystring, mystring[0])
-    print "{}[:0] = {}".format(mystring, mystring[:0])
-    print "{}[:1] = {}".format(mystring, mystring[:1])
-    print "{}[0:1] = {}".format(mystring, mystring[0:1])
-    print "{}[:2] = {}".format(mystring, mystring[:2])
-    print "{}[0:2] = {}".format(mystring, mystring[0:2])
-    print "{}[:4] = {}".format(mystring, mystring[:4])
-    print "{}[0:4] = {}".format(mystring, mystring[0:4])
-    print "{}[0:len] = {}".format(mystring, mystring[0:len(mystring)])
-    print "{}[1:] = {}".format(mystring, mystring[1:])
-    print "{}[:-1] = {}".format(mystring, mystring[:-1])
-    print "{}[:-2] = {}".format(mystring, mystring[:-2])
+    print("len({}) = {}".format(mystring, len(mystring)))
+    print("{}[0] = {}".format(mystring, mystring[0]))
+    print("{}[:0] = {}".format(mystring, mystring[:0]))
+    print("{}[:1] = {}".format(mystring, mystring[:1]))
+    print("{}[0:1] = {}".format(mystring, mystring[0:1]))
+    print("{}[:2] = {}".format(mystring, mystring[:2]))
+    print("{}[0:2] = {}".format(mystring, mystring[0:2]))
+    print("{}[:4] = {}".format(mystring, mystring[:4]))
+    print("{}[0:4] = {}".format(mystring, mystring[0:4]))
+    print("{}[0:len] = {}".format(mystring, mystring[0:len(mystring)]))
+    print("{}[1:] = {}".format(mystring, mystring[1:]))
+    print("{}[:-1] = {}".format(mystring, mystring[:-1]))
+    print("{}[:-2] = {}".format(mystring, mystring[:-2]))
     mystring = mystring[0] + "l" + mystring[2:]
-    print mystring
+    print(mystring)
 
 
 def write_char_at_position(string, position, char):
@@ -69,7 +69,7 @@ def write_char_at_position(string, position, char):
 
 
 def test_write_char_at_position():
-    print write_char_at_position("dragan", 1, "l")
+    print(write_char_at_position("dragan", 1, "l"))
 
 if __name__ == '__main__':
     # compare_strings_case_sensitive(string1, string2)

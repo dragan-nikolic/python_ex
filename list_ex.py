@@ -7,41 +7,46 @@ Created on 2012-12-14
 empty_list = []
 full_list = ['WINDOWS', 'LINUX', 'MAC']
 
-class MyClass():
-    pass
+
+def access_list_elements():
+    mylist = ['a', 'b', 'c', 'd', 'e']
+
+    print('list is {}'.format(mylist))
+    print('len(mylist) = {}'.format(len(mylist)))
+    print('last element mylist[-1] = {}'.format(mylist[-1]))
 
 def combine_lists():
     return [1, 2, 'three'] + [4, 'five']
 
 def delete_from_list():
     mylist = [1, 2, 3]
-    print mylist
-    mylist.remove(1)
-    print mylist
+    print(mylist)
+    mylist.remove(2)
+    print(mylist)
 
     a = MyClass()
     b = MyClass()
     mylist = [a, b]
-    print mylist
+    print(mylist)
     mylist.remove(a)
-    print mylist
+    print(mylist)
     
 def sort_list():
     mylist = [1, 20, 7, 15, 3]
     
-    print 'unsorted list %s' % mylist
+    print('unsorted list %s' % mylist)
     mylist.sort()
-    print 'sorted list %s' % mylist
+    print('sorted list %s' % mylist)
     
-    print 'print using iterator...'
+    print('print using iterator...')
     ix = 1
     for item in mylist:
-        print ix, item
+        print(ix, item)
         ix += 1
         
-    print 'print using index...'
+    print('print using index...')
     for ix in range(0, len(mylist)):
-        print ix+1, mylist[ix]
+        print(ix+1, mylist[ix])
     
     
 class MyItem():
@@ -77,24 +82,22 @@ def test_my_list_class():
     item3 = MyItem(9)
     
     mylist.append(item1)
-    print mylist.total
+    print(mylist.total)
     mylist.append(item2)
-    print mylist.total
+    print(mylist.total)
     mylist.append(item3)
-    print mylist.total
+    print(mylist.total)
     mylist.remove(item2)
-    print mylist.total
+    print(mylist.total)
     mylist.remove_by_amount(9)
-    print mylist.total
+    print(mylist.total)
     mylist.remove_by_amount(7)
-    print mylist.total
-    
-    
-    
+    print(mylist.total)
 
 
 if __name__ == '__main__':
     #print combine_lists()
     #delete_from_list()
     #test_my_list_class()
-    sort_list()
+    #sort_list()
+    access_list_elements()
