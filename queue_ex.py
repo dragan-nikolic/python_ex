@@ -2,6 +2,9 @@
 Created on 2017-09-13
 
 @author: dnikolic
+
+The best is to use 'collections.deque' Python 'list' supports opperations but is much
+less efficient (https://stackoverflow.com/questions/1296511/efficiency-of-using-a-python-list-as-a-queue)
 """
 import collections
 
