@@ -51,7 +51,9 @@ for root, dirs, files in os.walk(dir_name):
         print(type(filename))
 
         result = find_pattern_in_string(PATTERN_IN_ORIGINAL_NAME, filename)
-        result = find_pattern_in_string(PATTERN_IN_NEW_NAME, PATTERN_IN_ORIGINAL_NAME)
-        print('result: ', result)
+        print('result1: ', result)
+        print(type(result))
+        result = find_pattern_in_string(PATTERN_IN_NEW_NAME, result)
+        print('result2: ', result)
         if result:
             rename_file(filepath, os.path.join(filepath_parts[0], NAME_PREFIX + result + NAME_SUFFIX))
