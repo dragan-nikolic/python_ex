@@ -21,17 +21,20 @@ def find_pattern_in_string(pattern, string):
 
 def test_find_pattern_in_string():
     # Find exact 6 digits
-    print '(1.1) ' + find_pattern_in_string('\d{6}', 'view_release_471234.zip') # 471234
-    print '(1.2) ' + str(find_pattern_in_string('\d{6}', 'view_release_47123.zip')) # None
+    print('(1.1) ' + find_pattern_in_string('\d{6}', 'view_release_471234.zip')) # 471234
+    print('(1.2) ' + str(find_pattern_in_string('\d{6}', 'view_release_47123.zip'))) # None
 
     # Find dot (.) followed by one or more characters at the end of the string
-    print '(2.1) ' + find_pattern_in_string('\..+$', 'view_release_471234.gz') # .gz
-    print '(2.2) ' + find_pattern_in_string('\..+$', 'view.release_471234.gz') # .release_471234.gz
+    print('(2.1) ' + find_pattern_in_string('\..+$', 'view_release_471234.gz')) # .gz
+    print('(2.2) ' + find_pattern_in_string('\..+$', 'view.release_471234.gz')) # .release_471234.gz
 
     # Find dot (.) followed by one or more alphanumeric characters at the end of the string
-    print '(3.1) ' + find_pattern_in_string('\.[\w]+$', 'view.release_471234.gz') # .gz
-    print '(3.2) ' + find_pattern_in_string('\.\w+$', 'view.release_471234.gz') # .gz (same as previous)
-    print '(3.3) ' + str(find_pattern_in_string('\.\w+$', 'view_release_471234_gz')) # None
+    print('(3.1) ' + find_pattern_in_string('\.[\w]+$', 'view.release_471234.gz')) # .gz
+    print('(3.2) ' + find_pattern_in_string('\.\w+$', 'view.release_471234.gz')) # .gz (same as previous)
+    print('(3.3) ' + str(find_pattern_in_string('\.\w+$', 'view_release_471234_gz'))) # None
+
+    result = find_pattern_in_string('E\d\d', 'haha.E01.x264.m4v')
+    print('(4.1) ' + result)
 
 
 def check_match(match, number_of_groups):
@@ -82,5 +85,5 @@ def find_subgroups():
 
 
 if __name__ == '__main__':
-    #test_find_pattern_in_string()
-    find_subgroups()
+    test_find_pattern_in_string()
+    #find_subgroups()

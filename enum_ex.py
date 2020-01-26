@@ -17,5 +17,5 @@ RemoteEndpointType = enum(
     
 
 if __name__ == '__main__':
-    print 'LEP VIEW_CLIENT = %s' % LocalEndpointType.VIEW_CLIENT
-    print 'REP VIEW_HOST = %s' % RemoteEndpointType.VIEW_HOST
+    print('LEP VIEW_CLIENT = %s' % LocalEndpointType.VIEW_CLIENT)
+    print('REP VIEW_HOST = %s' % RemoteEndpointType.VIEW_HOST)

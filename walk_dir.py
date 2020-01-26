@@ -1,29 +1,18 @@
+"""
+Simple example to demo walk funciton
+
+Usage: $ python walk_ex.py <folder> (default is current dir)
+"""
+
 import os
 import sys
- 
-def is_ini_file(filepath):
-    return True
 
-def convert_testbed_spec(filepath):
-    fp = None
-    try:
-        fp = open(filepath, 'r')
-        file_lines = fp.readlines()
-        for file_line in file_lines:
-            if file_line.
-            print file_line
-    except Exception, e:
-        raise e
-    finally:
-        if fp:
-            fp.close()
-    
-    
- 
- 
-for root, _, files in os.walk(sys.argv[1]):
+try:
+    dir_name = sys.argv[1]
+except:
+    dir_name = "."
+
+for root, dirs, files in os.walk(dir_name):
     for filename in files:
         filepath = os.path.abspath(os.path.join(root, filename))
-        print '*** %s' % filepath
-        if is_ini_file(filepath):
-            convert_testbed_spec(filepath)
+        print('*** %s' % filepath)
