@@ -54,11 +54,8 @@ def test_exception_attributes():
         raise MyException('my exception')
     except Exception as e:
         print ('Exception attributes are: %s' % dir(e))
-        print ('message=%s' % e.message)
-        print ('str=%s' % str(e))
+        print ('str=%s' % e)
         print ('type=%s' % type(e))
-        print ('value=%s' % e.value)
-
         
         
 if __name__ == '__main__':
