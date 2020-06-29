@@ -32,6 +32,14 @@ def check_popups(wd):
 
     time.sleep(5)
 
+def check_if_user_is_logged(wd):
+    # "//a[@id='MyAccountLink']"
+    try: 
+        wd.find_element_by_xpath("//a[@id='MyAccountLink']").click()
+        print("MyAccountLink found!")
+    except:
+        print("MyAccountLink NOT found!")
+
 #driver = webdriver.Chrome('chromedriver')
 driver = webdriver.Firefox()
 #driver.implicitly_wait(10)
@@ -57,11 +65,5 @@ driver.find_element_by_xpath("//input[@name='password']").send_keys("Bazinga!1")
 driver.find_element_by_xpath("//input[@value='SIGN IN']").click()
 
 time.sleep(5)
-# "//a[@id='MyAccountLink']"
-try: 
-    driver.find_element_by_xpath("//a[@id='MyAccountLink']").click()
-    print("MyAccountLink found!")
-except:
-    print("MyAccountLink NOT found!")
-
+check_if_user_is_logged(driver)
 driver.close()
