@@ -12,15 +12,15 @@ import sys
 import re
 
 # --- Modify these variables to customize the renaming ---
-PATTERN_IN_ORIGINAL_NAME = '\.E\d\d\.'
-PATTERN_IN_NEW_NAME = 'E\d\d'
+PATTERN_IN_ORIGINAL_NAME = '\.E\d{1,3}\.'
+PATTERN_IN_NEW_NAME = '\d{1,3}' # PATTERN_IN_NEW_NAME pattern is subpattern of the PATERN_IN_ORIGINAL_NAME
 NAME_PREFIX = 'new_'
 NAME_SUFFIX = '_name.m4v'
 # --------------------------------------------------------
 
 try:
     dir_name = sys.argv[1]
-except:
+except Exception:
     dir_name = "."
 
 def find_pattern_in_string(pattern, string):
@@ -31,7 +31,7 @@ def find_pattern_in_string(pattern, string):
     
     try:
         res = re.compile(pattern).search(string).group()
-    except:
+    except Exception:
         res = None    
 
     return res
