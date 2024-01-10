@@ -9,7 +9,10 @@ users:
             password: password_2
             account: e-xact testing pos
     merchants:
-        - 1:
-            username: merchant_1
-            password: password_1
-            account: e-xact testing
+        - username: merchant_1
+          password: password_1
+          account: e-xact testing
+        - username: merchant_2
+          password: password_2
+          account: e-xact testing
+

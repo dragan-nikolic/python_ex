@@ -1,0 +1,21 @@
+table: 'REST'
+
+columns_with_no_nulls:
+  - brand_id
+  - rest_id
+  - rest_key
+  - source_system_name
+
+unique_columns_combination:
+  - brand_id
+  - rest_id
+
+column_distinct_values:
+  - brand_id:
+    - bww
+    - arbys
+    - jj
+  - operating_concept_type:
+    - null
+    - BWW GO
+    - ALLIANCE KITCHEN
