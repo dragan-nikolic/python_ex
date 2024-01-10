@@ -3,3 +3,6 @@
 
 .idea
 
+venv*/
+
+message_*.txt
