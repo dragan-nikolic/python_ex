@@ -71,10 +71,25 @@ def write_char_at_position(string, position, char):
 def test_write_char_at_position():
     print(write_char_at_position("dragan", 1, "l"))
 
+def strip_string():
+    s1 = '  shark  '
+    print(f"string: '{s1}'")
+
+    s1_remove_leading = s1.lstrip()
+    print(f"remove leading: '{s1_remove_leading}'")
+
+    s1_remove_trailing = s1.rstrip()
+    print(f"remove trailing: '{s1_remove_trailing}'")
+
+    s1_remove_both = s1.strip()
+    print(f"remove both: '{s1_remove_both}'")
+
+
 if __name__ == '__main__':
     # compare_strings_case_sensitive(string1, string2)
     # compare_strings_case_insensitive(string1, string2)
     # split_string('teradici\\dragan', '\\')
     # split_string('dragan', '\\')
-    string_parts()
+    #string_parts()
     #test_write_char_at_position()
+    strip_string()
