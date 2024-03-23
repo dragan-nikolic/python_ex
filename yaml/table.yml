@@ -1,21 +1,28 @@
-table: 'REST'
-
-columns_with_no_nulls:
-  - brand_id
-  - rest_id
-  - rest_key
-  - source_system_name
-
-unique_columns_combination:
-  - brand_id
-  - rest_id
-
-column_distinct_values:
-  - brand_id:
-    - bww
-    - arbys
-    - jj
-  - operating_concept_type:
-    - null
-    - BWW GO
-    - ALLIANCE KITCHEN
+table: 'REST'                 # environment agnostic table ID
+column_names_check: false    # check if table column names are correct
+foreign_keys:
+  - table_key: 
+      - column1
+      - column2
+    parent_table: table_id1
+    parent_key:
+      - pcolumn1
+      - pcolumn2
+  - table_key: 
+      - columnA
+    parent_table: table_id2
+    parent_key:
+      - pcolumnA
+columns:
+  column_name:
+    nulls: false           # does column has nulls
+    unique: true          # this column is part of the unique column combination
+    min: -10                # minimum value of the column
+    max: 30                # maximum value of the column
+    abs_min: 0.1        # minimum of the column's absolute values
+    abs_max: 14.3        # maximum of the column's absolute values
+    abs_non_zero_min: 1.5
+    distinct_values:              # list of column's distinct values
+      - value1
+      - value2
+      - value3
