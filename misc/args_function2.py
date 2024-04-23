@@ -1,5 +1,5 @@
 """
-Passa rgs by reference or by value
+Pass args by reference or by value
 Created on 2017-10-01
 
 @author: dnikolic

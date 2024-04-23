@@ -1,0 +1,12 @@
+column_name:
+  abs_max: 14.3
+  abs_min: 0.1
+  abs_non_zero_min: 1.5
+  distinct_values:
+  - value1
+  - value2
+  - value3
+  max: 30
+  min: -10
+  nulls: false
+  unique: true
