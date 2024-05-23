@@ -47,18 +47,25 @@ def test_validation_error_02():
         print (str(err))
 
 class MyException(Exception):
-    pass
+    def __init__(self, message, error_code):
+        super().__init__(message)
+        self.error_code = error_code
+        self.message = message
+
+    def __str__(self):
+        return f'MyException({self.message}, {self.error_code})'
         
 def test_exception_attributes():
     try:
-        raise MyException('my exception')
+        raise MyException('my exception', 1234)
     except Exception as e:
-        print ('Exception attributes are: %s' % dir(e))
-        print ('str=%s' % e)
-        print ('type=%s' % type(e))
+        print('Exception attributes are: %s' % dir(e))
+        print('str=%s' % e)
+        print('type=%s' % type(e))
+        print('message=%s' % e.message)
         
         
 if __name__ == '__main__':
-    test_validation_error_01()
-    test_validation_error_02()
+    #test_validation_error_01()
+    #test_validation_error_02()
     test_exception_attributes()
