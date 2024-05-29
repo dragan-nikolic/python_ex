@@ -84,6 +84,15 @@ def strip_string():
     s1_remove_both = s1.strip()
     print(f"remove both: '{s1_remove_both}'")
 
+def startswith():
+    s = 'Python'
+    prefix = 'Py'
+
+    print(f"check if string '{s}' starts with '{prefix}'")
+
+    print(s.startswith(prefix))    
+
+
 
 if __name__ == '__main__':
     # compare_strings_case_sensitive(string1, string2)

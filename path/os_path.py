@@ -11,7 +11,7 @@ def os_path_example():
     """
     
     pathname1 = os.path.join('c:', 'program files', 'videolan', 'vlc')
-    print('join: relative path on C: drive: ' + pathname1)
+    print('join: absolute path on C: drive: ' + pathname1)
     
     pathname2 = os.path.join('c:', os.sep, 'program files', 'videolan', 'vlc')
     pathname3 = os.path.join('c:\\', 'program files', 'videolan', 'vlc')  
@@ -42,7 +42,7 @@ def check_path_type(filepath):
         print('Relative path: %s' % filepath)
 
 def print_working_dir():
-    print(os.getcwd())
+    print(f'Working directory is: {os.getcwd()}')
 
 
 if __name__ == '__main__':
