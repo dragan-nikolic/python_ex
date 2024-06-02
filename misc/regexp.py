@@ -51,7 +51,7 @@ def find_subgroups():
     # followed by 1 to 3 digits)
     #pattern = "(\d{1,2}:)?\d+(,\d{1,3})?$"
     #number_of_groups = 2
-    pattern = "((\d{1,2}):)?(\d+)(,(\d{1,3}))?$"
+    pattern = '((\d{1,2}):)?(\d+)(,(\d{1,3}))?$'
     number_of_groups = 5
 
     # can use either match or search, both OK
@@ -82,8 +82,20 @@ def find_subgroups():
     match = re.match(pattern, value)
     print("{} is {}".format(value, check_match(match, number_of_groups)))
 
+def find_subgroups2():
+    # check timecode hh:mm:ss,ttt
+    #pattern = "^(\d{1,2}):(\d{1,2}):(\d{1,2}),(\d{1,3})$"
+    #number_of_groups = 4
+    pattern = "^(\d{1,2}):(\d{1,2}):(\d{1,2}),(\d{1,3})$"
+    number_of_groups = 4
+
+    # can use either match or search, both OK
+    value = "00:02:45,354"
+    match = re.match(pattern, value)
+    #match = re.search(pattern, value)
+    print("{} is {}".format(value, check_match(match, number_of_groups)))
 
 
 if __name__ == '__main__':
-    test_find_pattern_in_string()
-    #find_subgroups()
+    #test_find_pattern_in_string()
+    find_subgroups2()
