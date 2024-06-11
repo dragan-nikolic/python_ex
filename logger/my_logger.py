@@ -18,7 +18,7 @@ class my_handler(logging.Handler):
         logging.Handler.__init__(self, level=logging.DEBUG)
 
     def emit(self, record):
-        print self.format(record)
+        print(self.format(record))
     
     def format(self, record):
         self.formatter = logging.Formatter(
@@ -50,8 +50,8 @@ class my_logger(logging.Logger):
 
 
 def print_logging_levels():
-    print 'DEBUG: %d' % logging.DEBUG
-    print 'INFO: %d' % logging.INFO
-    print 'WARNING: %d' % logging.WARNING
-    print 'ERROR: %d' % logging.ERROR
-    print 'CRITICAL: %d' % logging.CRITICAL
+    print(f'DEBUG: {logging.DEBUG}')
+    print('WARNING: %d' % logging.WARNING)
+    print(f'INFO: {logging.INFO}') 
+    print('ERROR: %d' % logging.ERROR)
+    print('CRITICAL: %d' % logging.CRITICAL)
