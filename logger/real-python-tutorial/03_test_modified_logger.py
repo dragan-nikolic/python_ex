@@ -1,4 +1,5 @@
 # logging_example.py
+# https://realpython.com/python-logging/
 
 import logging
 
@@ -7,9 +8,9 @@ logger = logging.getLogger(__name__)
 
 # Create handlers
 c_handler = logging.StreamHandler()
-f_handler = logging.FileHandler('file.log')
-c_handler.setLevel(logging.WARNING)
-f_handler.setLevel(logging.ERROR)
+f_handler = logging.FileHandler('custom.log', 'a')
+c_handler.setLevel(logging.INFO)
+f_handler.setLevel(logging.DEBUG)
 
 # Create formatters and add it to handlers
 c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
@@ -21,5 +22,7 @@ f_handler.setFormatter(f_format)
 logger.addHandler(c_handler)
 logger.addHandler(f_handler)
 
-logger.warning('This is a warning')
-logger.error('This is an error')
+logger.debug('This is a debug message.')
+logger.info('This is an info message.')
+logger.warning('This is a warning!')
+logger.error('This is an error!')

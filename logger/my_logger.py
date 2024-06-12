@@ -51,7 +51,7 @@ class my_logger(logging.Logger):
 
 def print_logging_levels():
     print(f'DEBUG: {logging.DEBUG}')
-    print('WARNING: %d' % logging.WARNING)
     print(f'INFO: {logging.INFO}') 
+    print('WARNING: %d' % logging.WARNING)
     print('ERROR: %d' % logging.ERROR)
     print('CRITICAL: %d' % logging.CRITICAL)
