@@ -1,22 +1,15 @@
-'''
+"""
 Created on 2011-07-15
 
 @author: dnikolic
-'''
+"""
 
 import my_logger
 
+
 class MyClass(object):
-    '''
-    classdocs
-    '''
-
-
     def __init__(self):
-        '''
-        Constructor
-        '''
-        self.logger = my_logger.my_logger()
+        self.logger = my_logger.MyLogger()
     
     def doo(self):
         self.logger.debug('Debug message from doo() function.')

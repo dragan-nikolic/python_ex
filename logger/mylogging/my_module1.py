@@ -4,7 +4,7 @@ Created on 2024-06-11
 @author: dnikolic
 """
 
-import mylogging
+import logger.mylogging.mylogging as mylogging
 
 logger = mylogging.get_logger(__name__)
 

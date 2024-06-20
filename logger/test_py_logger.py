@@ -1,8 +1,8 @@
-'''
+"""
 Created on 2012-04-19
 
 @author: dnikolic
-'''
+"""
 
 import logging
 import time

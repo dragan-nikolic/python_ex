@@ -1,20 +1,14 @@
-'''
+"""
 Created on 2011-07-15
 
 @author: dnikolic
-'''
+"""
 
 import logging
 
-class my_handler(logging.Handler):
-    '''
-    classdocs
-    '''
 
+class MyHandler(logging.Handler):
     def __init__(self):
-        '''
-        Constructor
-        '''
         logging.Handler.__init__(self, level=logging.DEBUG)
 
     def emit(self, record):
@@ -30,20 +24,13 @@ class my_handler(logging.Handler):
         return self.formatter.format(record)
 
         
-class my_logger(logging.Logger):
-    '''
-    classdocs
-    '''
-
+class MyLogger(logging.Logger):
     def __init__(self):
-        '''
-        Constructor
-        '''
         logging.Logger.__init__(
                             self, 
                             self.__class__.__name__, 
                             level=logging.DEBUG)
-        self.addHandler(my_handler())
+        self.addHandler(MyHandler())
         
     def html_img(self, image):
         self.log(logging.INFO, '%s <img src="%s" />' % (image, image))
