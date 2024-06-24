@@ -1,12 +1,11 @@
 """
-Created on 2024-06-11
+Created on 2024-06-22
 
 @author: dnikolic
 """
+from utils.logging import Logger
 
-import mylogging
-
-logger = mylogging.get_logger(__name__)
+logger = Logger(__name__)
 
 
 class MyModule1:

@@ -1,13 +1,13 @@
 """
-Created on 2024-06-11
+Created on 2024-06-22
 
 @author: dnikolic
 """
 
-import mylogging
-from my_module1 import MyModule1
+from utils.logging import Logger
+from modules.my_module1 import MyModule1
 
-logger = mylogging.get_logger(__name__)
+logger = Logger(__name__)
 
 logger.debug('This is debug message.')
 logger.info('This is info message.')
