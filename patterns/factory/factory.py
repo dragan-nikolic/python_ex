@@ -3,7 +3,7 @@ class Shape(object):
         self.color = color
     
     def area(self):
-        print 'shape %s does not know how to calculate area!' % self.__class__.__name__
+        print('shape %s does not know how to calculate area!' % self.__class__.__name__)
 
 class Circle(Shape):
     def __init__(self, color, radius):
@@ -11,7 +11,7 @@ class Circle(Shape):
         self.radius = radius
 
     def whoami(self):
-        print 'I am %s %s with radius %d' % (self.color, self.__class__.__name__, self.radius) 
+        print('I am %s %s with radius %d' % (self.color, self.__class__.__name__, self.radius))
 
 class Rectangle(Shape):
     def __init__(self, color, a, b):
@@ -20,10 +20,10 @@ class Rectangle(Shape):
         self.b = b
 
     def whoami(self):
-        print 'I am %s %s with sides %d and %d' % (self.color, self.__class__.__name__, self.a, self.b) 
+        print('I am %s %s with sides %d and %d' % (self.color, self.__class__.__name__, self.a, self.b))
 
     def area(self):
-        print '%s area is %d' % (self.__class__.__name__, self.a*self.b)
+        print('%s area is %d' % (self.__class__.__name__, self.a*self.b))
 
 
 class ShapeFactoryA(object):
@@ -50,5 +50,5 @@ if __name__ == '__main__':
     s3.whoami()
     s3.area()
     
-    print 'object s1 is %s' % str(s1)
-    print 's1 type is %s, identity is %s' % (type(s1), id(s1))
+    print('object s1 is %s' % str(s1))
+    print('s1 type is %s, identity is %s' % (type(s1), id(s1)))
