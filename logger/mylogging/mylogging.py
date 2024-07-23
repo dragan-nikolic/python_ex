@@ -7,14 +7,14 @@ Created on 2024-06-11
 import logging
 
 
-def get_logger(module_name: str):
+def get_logger(module_name: str, logfile: str):
     # Create a custom logger
     logger = logging.getLogger(module_name)
     logger.setLevel(logging.DEBUG)
 
     # Create handlers
     c_handler = logging.StreamHandler()
-    f_handler = logging.FileHandler('custom.log', 'a')
+    f_handler = logging.FileHandler(logfile, 'a')
     c_handler.setLevel(logging.INFO)
     f_handler.setLevel(logging.DEBUG)
 
