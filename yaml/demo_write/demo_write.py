@@ -25,6 +25,6 @@ data = {
     }
 }
 
-f = open("test_write.yml", "w")
+f = open("demo_write.yml", "w")
 yaml.dump(data, f)
 f.close()
