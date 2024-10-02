@@ -1,3 +1,7 @@
+"""
+YAML Tutorial: A Complete Language Guide with Examples (https://spacelift.io/blog/yaml)
+"""
+
 import yaml
 import pprint
 
