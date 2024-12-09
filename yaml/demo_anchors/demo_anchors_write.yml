@@ -1,0 +1,18 @@
+vars:
+  service1:
+    config: &id001
+      env: prod
+      retries: 3
+      version: 4.8
+  service1c:
+    config: *id001
+  service2:
+    config:
+      env: prod
+      retries: 3
+      version: 5
+  service3:
+    config:
+      env: qa
+      retries: 3
+      version: 4.2

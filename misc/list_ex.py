@@ -16,7 +16,19 @@ def access_list_elements():
     print('last element mylist[-1] = {}'.format(mylist[-1]))
 
 def combine_lists():
-    return [1, 2, 'three'] + [4, 'five']
+    l1 = [1, 2, 'three']
+    print(f'l1 = {l1}')
+    l2 = [4, 'five']
+    print(f'l2 = {l2}')
+    print(f'l1+l2 = {l1 + l2}')
+
+def add_list_to_list():
+    l1 = ['-a', '-b', '-c']
+    print(f'original l1 = {l1}')
+    lstr = '-d -f -g'
+    print(lstr)
+    l1.extend(lstr.split())
+    print(f'extended l1 = {l1}')
 
 def delete_from_list():
     mylist = [1, 2, 3]
@@ -96,8 +108,9 @@ def test_my_list_class():
 
 
 if __name__ == '__main__':
-    #print combine_lists()
-    #delete_from_list()
-    #test_my_list_class()
-    #sort_list()
-    access_list_elements()
+    combine_lists()
+    add_list_to_list()
+    # delete_from_list()
+    # test_my_list_class()
+    # sort_list()
+    # access_list_elements()

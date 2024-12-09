@@ -1,0 +1,30 @@
+users:
+  admins:
+    - 1:
+      username: admin_1
+      password: password_1
+      account: e-xact testing
+    - 2:
+      username: admin_2
+      password: password_2
+      account: e-xact testing pos
+  merchants:
+    - username: merchant_1
+      password: password_1
+      account: e-xact testing
+    - username: merchant_2
+      password: password_2
+      account: e-xact testing
+  list_of_lists_1:
+    - ['a11', 'a12']
+    - ['a21', 'a22']
+    - ['a31', 'a32']
+  list_of_lists_2:
+    - - 'b11'
+      - 'b12'
+    - - 'b21'
+      - 'b22'
+    - - 'b31'
+      - 'b32'
+
+
