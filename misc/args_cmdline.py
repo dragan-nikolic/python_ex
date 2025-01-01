@@ -30,3 +30,4 @@ args = parse_args()
 print('Arguments after processed by argparser are: %s' % str(args))
 
 print('table_spec is: %s' % args.table_spec)
+print(f'name: {args.name}')
