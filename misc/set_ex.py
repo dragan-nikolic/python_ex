@@ -10,6 +10,14 @@ def access_set_elements():
     print(f'set is {myset}')
     print(f'len(myset) = {len(myset)}')
 
+    print('=== Add f ===')
+    myset.add('f')
+    print(f'set is {myset}')
+
+    print('=== Add a ===')
+    myset.add('a')
+    print(f'set is {myset}')
+
     print('set elements')
     for e in myset:
         print(f'element: {e}')
@@ -37,5 +45,5 @@ def join_using_update():
 
 if __name__ == '__main__':
     access_set_elements()
-    join_using_union()
-    join_using_update()
+    #join_using_union()
+    #join_using_update()
