@@ -23,6 +23,7 @@ def parse_args():
     parser.add_argument('-t', action="store", dest='height', type=int, default=180, help="short for --height")
     parser.add_argument('--height', action="store", dest='height', type=int, help="person's height")
     parser.add_argument('--name', action="append", dest="name") # can specify multiple times
+    parser.add_argument('--version', action='version', version='%(prog)s 1.1.0')
 
     return parser.parse_args()
 
