@@ -2,8 +2,8 @@
 
 ## Create virtual environment
 
-`$ python -m venv venv`
-`$ source venv/bin/activate`
+* `$ python -m venv venv`
+* `$ source venv/bin/activate`
 
 ## Install pylint
 
