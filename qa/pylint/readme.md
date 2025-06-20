@@ -1,4 +1,4 @@
-# [pylint tutorial](https://www.youtube.com/watch?v=fFY5103p5-c&ab_channel=RealPython)
+# Pylint example
 
 ## Create virtual environment
 
@@ -18,6 +18,10 @@
 
 You can disable/enable pylint issues inline or specify them in the .pylintrc
 file.
+
+## References
+
+* [pylint tutorial](https://www.youtube.com/watch?v=fFY5103p5-c&ab_channel=RealPython)
 
 
 
