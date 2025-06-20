@@ -11,8 +11,13 @@
 
 ## Run pylint
 
-`$ pylint example.py` This will report issues.
-`$ pylint example_good.py` This reports perfect score 10.
+* `$ pylint example.py` - this reports issues
+* `$ pylint example_good.py` - this reports perfect score 10
+
+## Configure pylint
+
+You can disable/enable pylint issues inline or specify them in the .pylintrc
+file.
 
 
 
